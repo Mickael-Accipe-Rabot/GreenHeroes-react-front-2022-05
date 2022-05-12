@@ -1,8 +1,8 @@
 import React from 'react'
-import './cardEventsList.css'
+import './eventsCardsList.css'
 
-export const CardEventsList = () => {
+export const EventsCardsList = () => {
   return (
-    <div>CardEventsList</div>
+    <div>EventsCardsList</div>
   )
 }
