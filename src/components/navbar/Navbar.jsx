@@ -14,7 +14,7 @@ export const Navbar = () => {
           <nav className="navbar">
             <div className="nav-container">
               <NavLink to="/" className="nav-logo">
-                GREENHEROES
+                <span className="navGreen">GREEN</span><span className="navHeroes">HEROES</span>
               </NavLink>
     
               <ul className={click ? 'nav-menu active':'nav-menu'}>
