@@ -5,6 +5,21 @@ body {
 .home-title {
   position: absolute;
   top: 0;
+  margin:1rem;
+}
+.home-subtitle{
+    font-size: 1.4rem;
+    text-align: center;
+}
+.greenHeroes{
+    margin: 1rem;
+    font-size: 1.6rem;;
+}
+.green{
+    color:var(--secondary-color);
+}
+.heroes{
+    color:var(--leaf-color);
 }
 .home-text {
   display: flex;
@@ -13,7 +28,7 @@ body {
   justify-content: space-evenly;
   height: 100vh;
   gap: 2rem;
-  margin: 0 2rem 0 2rem;
+  margin: 6rem 2rem 0 2rem;
 }
 .choiceList {
   text-decoration: none;
@@ -28,29 +43,27 @@ body {
 .choice-buttons-a,.choice-buttons-b{
     width:100%;
 }
-/* .choice-buttons-a,
-.choice-buttons-b {
-  text-decoration: none;
-  color: white;
-  width: 100%;
+.choice-item{
+    line-height: 3rem; /*40px pour un encadré parfait*/
+    margin-right: 1rem;
+    width:9rem;
+    text-align: center;
 }
+.choice-buttons-a, .choice-buttons-b{
+    color:#ECF8F6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height:100%;
+    border-bottom: 3px solid transparent;
+    width:100%;
+    display: block;
+    border-radius: 50px;
+}
+
 .choice-buttons-a {
   background: #2b8758;
-  border-radius: 16px;
-  
-  width: 9rem;
-  margin: 1rem;
-  border-radius: 50px;
-  text-align: center;
-    padding: 1rem;
 }
 .choice-buttons-b {
   background: #9f7250;
-  border-radius: 16px;
-  display: block;
-  width: 9rem;
-  margin: 1rem;
-  border-radius: 50px;
-  text-align: center;
-    padding: 1rem;
-} */
+
+} 
