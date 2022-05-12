@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Informer } from './pages/informer/Informer';
 import { Agir } from './pages/agir/Agir';
 import { Home } from './pages/home/Home';
+import {axios} from 'axios';
 
 
 function App() {

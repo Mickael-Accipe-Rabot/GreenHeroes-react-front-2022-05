@@ -6,18 +6,26 @@ export const Home = () => {
   return (
     <div>
       <div className="home-container">
-        <h1 className="home-title">GREENHEROES</h1>
+        <h1 className="home-title"><span className="green">GREEN</span> <span className="heroes">HEROES</span></h1>
         <div className="home-text">
           <h3 className="home-subtitle">
-            La nature à besoin de héros, les héros ont besoin de GreenHeroes
+            La nature à besoin de héros, les héros ont besoin de{' '}
+            <div className="greenHeroes">
+              <span className="green">GREEN</span>
+              <span className="heroes">HEROES</span>
+            </div>
           </h3>
 
           <ul className="choiceList">
-            <li>
-              <NavLink to="/informer" className='choice-buttons-a'>S'INFORMER</NavLink>
+            <li className="choice-item">
+              <NavLink to="/informer" className="choice-buttons-a">
+                S'INFORMER
+              </NavLink>
             </li>
-            <li>
-              <NavLink to="/agir" className='choice-buttons-b'>AGIR</NavLink>
+            <li className="choice-item">
+              <NavLink to="/agir" className="choice-buttons-b">
+                AGIR
+              </NavLink>
             </li>
           </ul>
         </div>
