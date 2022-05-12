@@ -1,12 +1,12 @@
 import React from 'react';
-import './cardEventsList.css';
+import './eventsCardsList.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { EventCard } from '../eventCard/EventCard';
 
-export const CardEventsList = () => {
-  const [eventDetails, setEventDetails] = useState({});
+export const EventsCardsList = () => {
+  const [eventDetails, setEventDetails] = useState([]);
 
   let { id } = useParams();
 
