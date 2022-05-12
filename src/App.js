@@ -4,6 +4,7 @@ import { Informer } from './pages/informer/Informer';
 import { Agir } from './pages/agir/Agir';
 import { Home } from './pages/home/Home';
 import {axios} from 'axios';
+import { EventDetails } from './components/eventDetails/EventDetails';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/agir" element={ <Agir/>} />
         <Route path="/informer" element={<Informer/>} />
+        <Route path="/eventdetails/:id" element={<EventDetails/>} />
+        
 
       </Routes>
       </div>
