@@ -18,13 +18,13 @@ export const Home = () => {
 
           <ul className="choiceList">
             <li className="choice-item">
-              <NavLink to="/informer" className="choice-buttons-a">
-                S'INFORMER
+            <NavLink to="/agir" className="choice-buttons-b">
+                AGIR
               </NavLink>
             </li>
             <li className="choice-item">
-              <NavLink to="/agir" className="choice-buttons-b">
-                AGIR
+              <NavLink to="/informer" className="choice-buttons-a">
+                S'INFORMER
               </NavLink>
             </li>
           </ul>
