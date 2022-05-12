@@ -1,9 +1,11 @@
+
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Informer } from "./pages/informer/Informer";
 import { Agir } from "./pages/agir/Agir";
 import { Home } from "./pages/home/Home";
 import { Form } from "./components/form/Form";
+import { EventDetails } from './components/eventDetails/EventDetails';
 import { axios } from "axios";
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
      <Route path="/" element={<Home />} />
      <Route path="/agir" element={<Agir />} />
      <Route path="/informer" element={<Informer />} />
+     <Route path="/eventdetails/:id" element={<EventDetails/>} />
      <Route path="/form" element={<Form />} />
     </Routes>
    </div>
