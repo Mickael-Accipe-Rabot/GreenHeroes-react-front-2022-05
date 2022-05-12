@@ -7,10 +7,11 @@
     width: 100%;
     height: 100%;
     background-color: var(--light-color);
+    padding: 0 0 4rem 0;
 }
 .details-map{
     width: 100%;
-    height:40vh;
+    height:38vh;
     background-color: black;
     color: white;
     text-align: center;
@@ -20,6 +21,7 @@
     display:flex;
     flex-direction:column;
     gap:1rem;
+    width: 80%;
 }
 .details-top, .details-bottom{
     display:flex;
@@ -29,4 +31,49 @@
 .details-top-info{
     display:flex;
     gap:1rem;
+    justify-content: space-between;
+}
+hr{
+    color: rgba(0, 0, 0, 0.119);
+}
+.details-description-text{
+    font-weight: bold;
+}
+.details-description{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.details-adress{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+
+}
+.participer{
+    width:20%;
+    padding:.8rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.players-list{
+    width:80%;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.players-list-name{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.players-number{
+    font-weight: bold;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+.hr-end{
+    width:80%;
 }

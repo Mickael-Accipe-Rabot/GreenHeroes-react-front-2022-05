@@ -37,3 +37,6 @@
   transition: all 400ms;
   transform: translateY(-5px);
 }
+body{
+  background-color: var(--light-color);
+}
