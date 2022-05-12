@@ -47,7 +47,7 @@
     margin-right:2rem;
 }
 .nav-links{
-    color:var(--ground-color);
+    color:var(--ground-color-hover);
     text-decoration: none;
     padding: 0.5rem 1rem;
     height:100%;
@@ -94,7 +94,7 @@
         display:flex;
         flex-direction: column;
         width:100%;
-        border-top : 2px solid #FEEAA1;
+        border-top : 2px solid var(--leaf-color);
         position:absolute;
         top:80px;
         left:-110%;
@@ -103,14 +103,14 @@
         box-shadow:0px 4px 8px rgb(145, 145, 145);
     }
     .nav-menu.active{
-        background:#4086da;
+        background:rgb(229,231,225);
         left:0px;
         opacity: 1;   
         transition: all 500ms ease;
         z-index: 1;
     }
     .nav-item .active{
-        color:#FEEAA1;
+        color:var(--ground-color-hover);
         border:none;
     }
     .nav-links{
@@ -123,9 +123,10 @@
         position:absolute;
         top:0;
         right:0;
-        transform:translate(-100%, 60%);
+        transform:translate(-100%, 80%);
         font-size: 1.8rem;
         cursor: pointer;
-        color:#FEEAA1;
+        color:var(--ground-color-hover);
+        
     }
 }
