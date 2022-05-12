@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
   return (
-    <div>
+    <div className='body-home'>
       <div className="home-container">
         <h1 className="home-title"><span className="green">GREEN</span> <span className="heroes">HEROES</span></h1>
         <div className="home-text">
