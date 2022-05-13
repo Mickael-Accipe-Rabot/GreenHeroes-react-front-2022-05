@@ -1,0 +1,17 @@
+.box {
+ display: flex;
+ height: 100vh;
+ overflow: hidden;
+}
+
+.eventlist {
+ display: flex;
+ padding: 20px;
+ width: 40%;
+}
+
+.map {
+ position: relative;
+ width: 60%;
+ height: 100vh;
+}
