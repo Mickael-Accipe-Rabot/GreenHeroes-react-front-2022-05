@@ -1,5 +1,5 @@
 .ArticleList {
-  background-color: var(--light-color);
+  background-color: white;
   height: 100vh;
 }
 
@@ -14,17 +14,18 @@
 
 .ArticleList_category button {
   display: inline-block;
-  background-color: rgba(0, 129, 207, 1);
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   padding: 14px;
   text-decoration: none;
   border-radius: 50px;
   font-size: large;
   margin: 5px;
-  border: 1px solid rgba(0, 129, 207, 1);
+  border: 1px solid white;
   cursor: pointer;
   padding: 1rem;
+  width: 7rem;
 }
 
 .ArticleList_category button:hover {
@@ -37,6 +38,11 @@
 }
 
 .ArticleList_category button:active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.ArticleList_category button:focus {
   background-color: var(--secondary-color);
   color: white;
 }

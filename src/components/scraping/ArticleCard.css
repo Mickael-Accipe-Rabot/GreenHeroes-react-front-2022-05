@@ -1,6 +1,6 @@
 .ArticleCard {
   display: flex;
-  background-color: rgba(226, 226, 226, 1);
+  background-color: white;
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
@@ -11,7 +11,7 @@
 .ArticleCard_content {
   width: 90%;
   margin: 1rem 0;
-  background-color: white;
+  background-color: lightgray;
   color: black;
   border: 0px solid black;
   transition: transform 100ms ease-in;
@@ -26,6 +26,7 @@
 
 .ArticleCard_content:hover {
   transform: scale(1.07);
+  box-shadow: 0px 4px 3px black;
 }
 
 .title {
