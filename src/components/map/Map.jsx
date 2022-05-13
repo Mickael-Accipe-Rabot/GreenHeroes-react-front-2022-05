@@ -32,6 +32,8 @@ export const Map = ({ event }) => {
 
  //
 
+ const [showPopup, setShowPopup] = useState(false);
+
  return (
   <ReactMapGL
    mapStyle="mapbox://styles/guillaumepinot/cl33h6nuv007q14pfv0fefjah"
@@ -56,9 +58,8 @@ export const Map = ({ event }) => {
        <Popup
         latitude={event.y_coor}
         longitude={event.x_coor}
-        title={event.title}
-        offsetLeft={-20}
-        offsetTop={-10}
+        onClose={() => setShowPopup(false)}
+        closeOnClick={false}
        >
         <p>{event.title}</p>
         <p>{event.author}</p>
