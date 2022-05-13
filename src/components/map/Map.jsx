@@ -9,7 +9,7 @@ export const Map = ({ event }) => {
  const [viewport, setViewport] = useState({
   latitude: 48.856614,
   longitude: 2.3522219,
-  zoom: 5,
+  zoom: 11,
  });
 
  const [eventDetails, setEventDetails] = useState([]);
