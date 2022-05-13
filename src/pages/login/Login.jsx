@@ -36,6 +36,7 @@ export const Login = () => {
     <div className="login">
       <div className="login_form" >
         <form onSubmit={(e) => handleSubmit(e)}>
+          <h1>Sign in</h1>
           <input
             placeholder="email"
             type="text"
@@ -59,12 +60,9 @@ export const Login = () => {
               />
            
           </div>
-            </form>
-
             <div className="or_sign_up">
               or create your account{""}
               <span
-                className=""
                 onClick={toggleVisible}
               >
                 here
@@ -74,7 +72,9 @@ export const Login = () => {
               isVisible={isVisible}
               toggleVisible={toggleVisible}
             />
+            </form>
           </div> 
+
       </div>
   );
 };
