@@ -40,7 +40,9 @@ export const ArticleCard = ({ article }) => {
           }
         />
         <div className="ArticleCard_content_text">
-          <h3 className="title">{`${article.title.slice(0, -25)}...`}</h3>
+          <a href={article.source} target="_blank">
+            <h3 className="title">{`${article.title.slice(0, -25)}...`}</h3>
+          </a>
           <p className="description">{`${article.desc.slice(0, -25)}...`}</p>
         </div>
       </div>
