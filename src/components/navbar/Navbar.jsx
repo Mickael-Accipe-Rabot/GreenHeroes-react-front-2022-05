@@ -34,13 +34,15 @@ export const Navbar = () => {
                     Agir
                   </NavLink>
                 </li>
+                
               </ul>
+              <DropdownsDesktop />
               <div className="nav-icon" onClick={handleClick}>
                <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
                {/* TO PUT IN PUBLIC/INDEX.HTML */}
                {/* <script src="https://kit.fontawesome.com/0f83e5d3b7.js"crossorigin="anonymous"></script> */}
                 </div>
-                <DropdownsDesktop />
+               
             </div>
           </nav>
         </div>

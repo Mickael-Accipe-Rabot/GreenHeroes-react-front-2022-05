@@ -26,21 +26,21 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="flex items-row justify-end" >
-<div className="relative inline-block text-left">
-  <div>
-    <button type="button" className="" 
-    onClick={handleVisible}>
-      <img src={character.list_imageUrl} alt='ProfilePicture' className="dropdown-img"/>
-    </button>
+    <div >
+<div >
+  <div className='drop-button'>
+   
+    
+      <img src={character.list_imageUrl} alt='ProfilePicture' className="dropdown-img" onClick={handleVisible}/>
+   
   </div>
   {showMenu &&    /* It's like if/else */
-  <div onMouseLeave={()=> setShowMenu(!showMenu)} className="" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-    <div className="" role="none">
-    <Link to="/myprofile"><button type="submit" className="" role="menuitem" tabindex="-1" id="menu-item-1">My profile</button></Link>
-    <button className="" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</button>
-    <Link to="/login"><button type="submit" className="" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button></Link>
-    </div>
+  <div onMouseLeave={()=> setShowMenu(!showMenu)}  className="dropD"  tabindex="-1">
+    
+    <Link to="/myprofile"><p type="submit"  role="menuitem" tabindex="-1" id="menu-item-1" className='buttonD'>My profile</p></Link>
+    <p className='buttonD' role="menuitem" tabindex="-1" id="menu-item-0">Account settings</p>
+    <Link className='buttonD' to="/login"><p type="submit"  role="menuitem" tabindex="-1" id="menu-item-3">Sign out</p></Link>
+  
   </div>}
 </div>
     </div>
