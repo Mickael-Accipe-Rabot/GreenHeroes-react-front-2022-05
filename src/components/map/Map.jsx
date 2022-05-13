@@ -30,14 +30,12 @@ export const Map = ({ event }) => {
  //  const center = getCenter(coordinates);
  //  console.log("test3", center);
 
- //
-
  const [showPopup, setShowPopup] = useState(false);
 
  return (
   <ReactMapGL
    mapStyle="mapbox://styles/guillaumepinot/cl33h6nuv007q14pfv0fefjah"
-   mapboxAccessToken="pk.eyJ1IjoiZ3VpbGxhdW1lcGlub3QiLCJhIjoiY2wzM2gzdnR5MDI5aDNka2Iza3hpeTcxNiJ9.npSjAygq-ILwz6Cn3Z5GRw"
+   mapboxAccessToken={`${process.env.REACT_APP_API_KEY}`}
    //style={{ width: "fit", height: 900 }}
    {...viewport}
    onMove={(evt) => setViewport(evt.viewport)}
