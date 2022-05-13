@@ -15,20 +15,3 @@
  width: 60%;
  height: 100vh;
 }
-
-@media screen and (max-width: 640px) {
- .box {
-  display: flex;
-  flex-direction: column;
- }
-
- .eventlist {
-  display: flex;
-  padding: 20px;
- }
-
- .map {
-  display: flex;
-  height: 100vh;
- }
-}
