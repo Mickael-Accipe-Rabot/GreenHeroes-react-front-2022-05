@@ -1,0 +1,73 @@
+.ArticleList {
+  background-color: var(--light-color);
+  height: 100vh;
+}
+
+.ArticleList_category {
+  overflow: auto;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.ArticleList_category button {
+  display: inline-block;
+  background-color: rgba(0, 129, 207, 1);
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: large;
+  margin: 5px;
+  border: 1px solid rgba(0, 129, 207, 1);
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.ArticleList_category button:hover {
+  background-color: var(--secondary-color);
+  border: var(--secondary-color);
+  color: white;
+  box-shadow: 0px 6px 12px var(--leaf-color-hover);
+  transition: all 400ms;
+  transform: translateY(-5px);
+}
+
+.ArticleList_category button:active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* .active_btn {
+  background-color: black;
+  border-radius: 50px;
+  color: black;
+} */
+
+.inactive_btn {
+  background-color: var(--leaf-color);
+  color: var(--light-color);
+  border-radius: 50px;
+}
+
+.inactive_btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  box-shadow: 0px 6px 12px var(--leaf-color-hover);
+  transition: all 400ms;
+  transform: translateY(-5px);
+}
+
+.inactive_btn:active {
+  background-color: black;
+  border-radius: 50px;
+  color: black;
+}
+
+.ArticleCard_content_text a {
+  text-decoration: none;
+  color: black;
+}

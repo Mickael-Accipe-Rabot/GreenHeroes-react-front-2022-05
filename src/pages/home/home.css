@@ -1,11 +1,11 @@
-body {
+.body-home {
   height: 100vh;
   background-image: url('../../assets/pictures/homePicture.jpg');
   background-size: cover;
 }
 
 .home-title {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   margin: 1rem;
 }
@@ -107,4 +107,28 @@ body {
 .choice-item{
     width:11rem;
 }
+}
+.first-line{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: space-between;
+  width:100%;
+}
+.login-button{
+margin: 0 1rem 0 0;
+width:6rem;
+background-color: var(--secondary-color);
+text-align: center;
+border-radius: 50px;
+color:white;
+text-decoration: none;
+padding:.5rem 1rem .5rem 1rem;
+}
+.login-button:hover{
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  box-shadow: 0px 4px 8px var(--leaf-color-hover);
+  transition: all 400ms;
+  transform: translateY(-5px);
 }

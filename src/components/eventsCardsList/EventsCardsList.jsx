@@ -18,12 +18,12 @@ export const EventsCardsList = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>Evènements</h1>
-
-      <div>
+    <div className="eventsCardsList-container">
+      <h1 className="list-title">Evènements</h1>
+    
+      <div className="events-list">
         {eventDetails.map((event, index) => (
-          <div key={index}>
+          <div key={index} className='event-card'>
             <EventCard event={event} />
           </div>
         ))}

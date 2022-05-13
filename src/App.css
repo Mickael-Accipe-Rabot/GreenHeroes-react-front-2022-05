@@ -3,7 +3,7 @@
   --ground-color: #9F7250;
   --see-color: #0089BA;
   --secondary-color: #845EC2;
-  --light-color:white;
+  --light-color:rgb(229,231,225);
   --dark-color:black;
 
   --leaf-color-hover: #09321c;
@@ -36,4 +36,7 @@
   box-shadow: 0px 6px 12px var(--ground-color-hover);
   transition: all 400ms;
   transform: translateY(-5px);
+}
+body{
+  background-color: var(--light-color);
 }
