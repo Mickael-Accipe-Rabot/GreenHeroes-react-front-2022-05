@@ -2,6 +2,7 @@ import React from 'react'
 import './navbar.css'
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import DropdownsDesktop from './DropDownDesktop';
 
 
 
@@ -39,6 +40,7 @@ export const Navbar = () => {
                {/* TO PUT IN PUBLIC/INDEX.HTML */}
                {/* <script src="https://kit.fontawesome.com/0f83e5d3b7.js"crossorigin="anonymous"></script> */}
                 </div>
+                <DropdownsDesktop />
             </div>
           </nav>
         </div>
