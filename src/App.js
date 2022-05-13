@@ -7,6 +7,7 @@ import { Home } from "./pages/home/Home";
 import { Form } from "./components/form/Form";
 import { EventDetails } from './components/eventDetails/EventDetails';
 import { Login } from "./pages/login/Login";
+import MyProfile from "./pages/myprofile/MyProfile";
 import { axios } from "axios";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Routes>
      <Route path="/" element={<Home />} />
      <Route path="/login" element={<Login />} />
+     <Route path="/myprofile" element={<MyProfile />} />
      <Route path="/agir" element={<Agir />} />
      <Route path="/informer" element={<Informer />} />
      <Route path="/eventdetails/:id" element={<EventDetails/>} />
