@@ -20,7 +20,7 @@ function App() {
      <Route path="/myprofile" element={<MyProfile />} />
      <Route path="/agir" element={<Agir />} />
      <Route path="/informer" element={<Informer />} />
-     <Route path="/eventdetails/:id" element={<EventDetails/>} />
+     <Route path="/agir/:id" element={<EventDetails/>} />
      <Route path="/form" element={<Form />} />
     </Routes>
    </div>
