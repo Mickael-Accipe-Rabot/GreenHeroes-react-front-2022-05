@@ -1,0 +1,29 @@
+.eventsCardsList-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+.events-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 2rem;
+}
+.list-title {
+  margin: 2rem 0 4rem 0;
+  text-decoration: none;
+}
+.event-card{
+    width: 80%;
+}
+/*************DESKTOP***************/
+@media screen and (min-width: 960px) {
+    .eventsCardsList-container{
+        width:25%;
+    }
+}
