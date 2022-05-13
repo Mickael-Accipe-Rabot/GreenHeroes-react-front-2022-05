@@ -1,33 +1,33 @@
-import axios from "axios";
-import { useState } from "react";
+import axios from 'axios';
+import { useState } from 'react';
 import './createAccountForm.css';
 
 export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [picture, setPicture] = useState("");
-  const [streetNumber, setStreetNumber] = useState("");
-  const [streetName, setStreetName] = useState("");
-  const [zipCode, setZipCode] = useState("");
-  const [city, setCity] = useState("");
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [picture, setPicture] = useState('');
+  const [streetNumber, setStreetNumber] = useState('');
+  const [streetName, setStreetName] = useState('');
+  const [zipCode, setZipCode] = useState('');
+  const [city, setCity] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("fonction");
+    console.log('fonction');
 
-//     | id            | int          | NO   | PRI | NULL    | auto_increment |
-// | first_name    | varchar(100) | YES  |     | NULL    |                |
-// | last_name     | varchar(100) | YES  |     | NULL    |                |
-// | email         | varchar(100) | YES  | UNI | NULL    |                |
-// | password      | varchar(100) | YES  |     | NULL    |                |
-// | list_imageUrl | varchar(255) | YES  |     | NULL    |                |
-// | street_number | varchar(100) | YES  |     | NULL    |                |
-// | street_name   | varchar(255) | YES  |     | NULL    |                |
-// | zip_code      | int          | YES  |     | NULL    |                |
-// | city          | varchar(255) | YES  |     | NULL    |                |
+    //     | id            | int          | NO   | PRI | NULL    | auto_increment |
+    // | first_name    | varchar(100) | YES  |     | NULL    |                |
+    // | last_name     | varchar(100) | YES  |     | NULL    |                |
+    // | email         | varchar(100) | YES  | UNI | NULL    |                |
+    // | password      | varchar(100) | YES  |     | NULL    |                |
+    // | list_imageUrl | varchar(255) | YES  |     | NULL    |                |
+    // | street_number | varchar(100) | YES  |     | NULL    |                |
+    // | street_name   | varchar(255) | YES  |     | NULL    |                |
+    // | zip_code      | int          | YES  |     | NULL    |                |
+    // | city          | varchar(255) | YES  |     | NULL    |                |
 
     const data = {
       first_name: firstname,
@@ -39,38 +39,42 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
       street_name: streetName,
       zip_code: zipCode,
       city: city,
-      country: "France"
+      country: 'France',
     };
 
     console.log(data);
 
     axios
-      .post("/api/users", data, {withCredentials: true})
-      .then ((res)=>{
-        console.log(res.data)
-        window.location = '/';})
+      .post('/api/users', data, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        window.location = '/';
+      })
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className="create-container">
+    <div className='aaabbb'>
       {isVisible && (
         <div className="">
-          <div
-            className="" >
-            <div className="">
+          <div className="">
+            <div className="create-title">
               Become a Green Hero now
-              <br />-<br />
-              Create your account
+              
+             <p>Create your account</p> 
             </div>
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form
+              className="create-container"
+              onSubmit={(e) => handleSubmit(e)}
+            >
               <input
                 placeholder="Firstname"
                 type="text"
                 required
                 value={firstname}
                 onChange={(e) => setFirstname(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Lastname"
@@ -78,28 +82,32 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 required
                 value={lastname}
                 onChange={(e) => setLastname(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Picture"
                 type="text"
                 value={picture}
                 onChange={(e) => setPicture(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Street Number"
@@ -107,7 +115,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 required
                 value={streetNumber}
                 onChange={(e) => setStreetNumber(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Street Name"
@@ -115,7 +124,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 required
                 value={streetName}
                 onChange={(e) => setStreetName(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="Zip Code"
@@ -123,7 +133,8 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 required
                 value={zipCode}
                 onChange={(e) => setZipCode(e.target.value)}
-                className="" />
+                className=""
+              />
 
               <input
                 placeholder="City"
@@ -131,14 +142,13 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 required
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="" />
+                className=""
+              />
 
-              <button
-                onClick={handleSubmit}
-                className=" ">
+              <button className='login-create-button' onClick={handleSubmit} >
                 Create
-                </button>
-              </form>
+              </button>
+            </form>
           </div>
         </div>
       )}
