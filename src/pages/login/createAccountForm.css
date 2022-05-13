@@ -1,0 +1,41 @@
+.create-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    gap:1rem;
+}
+.login-create-button{
+    width:4rem;
+    border-radius:50px;
+    background-color:var(--leaf-color);
+    color:var(--light-color);
+    font-weight:bold;
+    text-decoration:none;
+    padding:0.5rem 0rem;
+    text-align: center;
+}
+.login-create-button:hover{
+    background-color:var(--secondary-color);    
+    color:var(--light-color);
+    box-shadow:0px 6px 12px var(--leaf-color-hover);
+    transition:all 400ms;
+    transform:translateY(-5px);
+
+}
+.aaabbb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.create-title{
+    font-size:1.4rem;
+    gap:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:1rem;
+}
