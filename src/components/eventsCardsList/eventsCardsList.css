@@ -18,6 +18,9 @@
   margin: 2rem 0 4rem 0;
   text-decoration: none;
 }
+.event-title:hover{
+  color:var(--leaf-color);
+}
 .event-card{
     width: 80%;
 }
