@@ -7,6 +7,19 @@ import { Navbar } from '../navbar/Navbar';
 
 export const EventDetails = () => {
   const [eventDetails, setEventDetails] = useState({});
+  const [isParticipate, setIsParticipate] = useState(false);
+
+  const handleClick = () => {
+    setIsParticipate(!isParticipate);
+    console.log(isParticipate);
+  };
+  const unsubscribe = () => {
+    if (isParticipate) {
+      onmouseleave = () => {
+        'participer';
+      };
+    }
+  };
 
   let { id } = useParams();
 
@@ -60,30 +73,34 @@ export const EventDetails = () => {
           <hr className="last-hr"></hr>
         </div>
         <div className="details-players">
-          <button className="green-btn participer">Participer</button>
+          <button
+            onClick={handleClick}
+            className={isParticipate ? 'green-btn subscribe' : 'unsubscribe'}
+          >
+            {isParticipate ? 'Participer' : 'Inscris'}
+          </button>
 
-          {/* <hr className="hr-end"></hr> */}
-          <div className='players-list'>
-          <div className="players-number">
-            <span className="nombre-de">nombre de participants :</span>
-            <span> 6{/*{eventDetails.players.length}*/}</span>
-          </div>
+          <div className="players-list">
+            <div className="players-number">
+              <span className="nombre-de">nombre de participants :</span>
+              <span> 6{/*{eventDetails.players.length}*/}</span>
+            </div>
 
-          {/* <div className="players-list-name">
+            {/* <div className="players-list-name">
           {players.map((player) => (
             <div className="player-item">
               <p>{player.name}</p>
             </div>
           ))}
         </div> */}
-          <div className="players-list-name">
-            <p className="player-item">john</p>
-            <p className="player-item">Koko</p>
-            <p className="player-item">Jojo</p>
-            <p className="player-item">Lolo</p>
-            <p className="player-item">Toto</p>
-            <p className="player-item">Soso</p>
-          </div>
+            <div className="players-list-name">
+              <p className="player-item">john</p>
+              <p className="player-item">Koko</p>
+              <p className="player-item">Jojo</p>
+              <p className="player-item">Lolo</p>
+              <p className="player-item">Toto</p>
+              <p className="player-item">Soso</p>
+            </div>
           </div>
           {/* </div> */}
         </div>
