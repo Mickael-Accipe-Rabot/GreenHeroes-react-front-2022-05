@@ -7,7 +7,7 @@ import "./agir.css";
 export const Agir = () => {
  return (
   <div className="body">
-   <Navbar />
+   <div className="navagir"><Navbar /></div>
    <div className="box">
     <div className="eventlist">
      <EventsCardsList />
