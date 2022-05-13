@@ -79,8 +79,9 @@
 
 .nav-item .active{
     color:var(--leaf-color);
-    border-top: 3px solid;
-    border-radius:16px;
+    font-weight: bold;
+    /* border-top: 3px solid; */
+    /* border-radius:16px; */
 
     /* border:1px solid #FEEAA1; */
 }

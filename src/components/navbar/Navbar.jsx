@@ -19,11 +19,11 @@ export const Navbar = () => {
               </NavLink>
     
               <ul className={click ? 'nav-menu active':'nav-menu'}>
-                <li className='nav-item'>
+                {/* <li className='nav-item'>
                   <NavLink to="/" className={(navData) => navData.isActive ? "active nav-links" : "nav-links" } onClick={handleClick}>
                     Home
                   </NavLink>
-                </li>
+                </li> */}
                 <li className='nav-item'>
                   <NavLink to="/informer" className={(navData) => navData.isActive ? "active nav-links" : "nav-links" }onClick={handleClick} >
                     S'informer
