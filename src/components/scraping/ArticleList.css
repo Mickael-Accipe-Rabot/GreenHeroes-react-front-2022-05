@@ -1,5 +1,6 @@
 .ArticleList {
   background-color: rgba(229, 229, 229, 1);
+  height: 100vh;
 }
 
 .ArticleList_category {
@@ -25,6 +26,11 @@
 }
 
 .ArticleList_category button:hover {
+  background-color: rgba(0, 129, 207, 1);
+  color: white;
+}
+
+.ArticleList_category button:focus {
   background-color: rgba(0, 129, 207, 1);
   color: white;
 }

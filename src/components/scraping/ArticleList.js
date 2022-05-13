@@ -41,12 +41,65 @@ export const ArticleList = () => {
         </button>
       </div>
 
-      {articles &&
-        articles.map((article) => {
-          return (
-            <div key={article.title}>{<ArticleCard article={article} />}</div>
-          );
-        })}
+      {articles && climatFilter
+        ? articles
+            .filter(
+              (article) =>
+                article.title.includes("Sécheresse") ||
+                article.title.includes("sécheresses") ||
+                article.title.includes("sécheresse")
+            )
+            .map((article) => {
+              return (
+                <div key={article.title}>
+                  {<ArticleCard article={article} />}
+                </div>
+              );
+            })
+        : politiqueFilter
+        ? articles
+            .filter(
+              (article) =>
+                article.title.includes("Jour") || article.title.includes("rue")
+            )
+            .map((article) => {
+              return (
+                <div key={article.title}>
+                  {<ArticleCard article={article} />}
+                </div>
+              );
+            })
+        : socialFilter
+        ? articles
+            .filter(
+              (article) =>
+                article.title.includes("Activistes") ||
+                article.title.includes("écologiste") ||
+                article.title.includes("Luttes") ||
+                article.title.includes("réseaux")
+            )
+            .map((article) => {
+              return (
+                <div key={article.title}>
+                  {<ArticleCard article={article} />}
+                </div>
+              );
+            })
+        : nucleaireFilter
+        ? articles
+            .filter((article) => article.title.includes("nucléaire"))
+            .map((article) => {
+              return (
+                <div key={article.title}>
+                  {<ArticleCard article={article} />}
+                </div>
+              );
+            })
+        : articles.map((article) => {
+            return (
+              <div key={article.title}>{<ArticleCard article={article} />}</div>
+            );
+          })}
     </div>
   );
 };
