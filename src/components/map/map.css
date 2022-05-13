@@ -1,0 +1,12 @@
+/* .map{
+    height: 100% !important
+}
+
+.fullmap{
+    height: 100% !important
+} */
+
+.cursor {
+    cursor: pointer;
+    font-size: 80px;
+}
