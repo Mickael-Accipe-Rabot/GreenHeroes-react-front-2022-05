@@ -31,7 +31,6 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
     const data = {
       first_name: firstname,
       last_name: lastname,
-      full_name: `${firstname} ${lastname}`,
       email: email,
       password: password,
       list_imageUrl: picture,
@@ -59,7 +58,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
           <div
             className="" >
             <div className="">
-              Connect with Westeros now
+              Become a Green Hero now
               <br />-<br />
               Create your account
             </div>
