@@ -24,6 +24,6 @@
 /*************DESKTOP***************/
 @media screen and (min-width: 960px) {
     .eventsCardsList-container{
-        width:25%;
+        width:100%;
     }
 }
