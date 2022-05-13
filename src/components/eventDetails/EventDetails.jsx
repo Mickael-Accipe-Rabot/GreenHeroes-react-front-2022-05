@@ -75,9 +75,9 @@ export const EventDetails = () => {
         <div className="details-players">
           <button
             onClick={handleClick}
-            className={isParticipate ? 'green-btn subscribe' : 'unsubscribe'}
+            className={isParticipate ?  'unsubscribe': 'green-btn subscribe'}
           >
-            {isParticipate ? 'Participer' : 'Inscris'}
+            {isParticipate ?'Inscris' : 'Participer' }
           </button>
 
           <div className="players-list">
