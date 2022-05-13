@@ -4,24 +4,42 @@ import { useState } from "react";
 export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
-  const [title, setTitle] = useState("");
-  const [family, setFamily] = useState("");
-  const [picture, setPicture] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [picture, setPicture] = useState("");
+  const [streetNumber, setStreetNumber] = useState("");
+  const [streetName, setStreetName] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [city, setCity] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log("fonction");
 
+//     | id            | int          | NO   | PRI | NULL    | auto_increment |
+// | first_name    | varchar(100) | YES  |     | NULL    |                |
+// | last_name     | varchar(100) | YES  |     | NULL    |                |
+// | email         | varchar(100) | YES  | UNI | NULL    |                |
+// | password      | varchar(100) | YES  |     | NULL    |                |
+// | list_imageUrl | varchar(255) | YES  |     | NULL    |                |
+// | street_number | varchar(100) | YES  |     | NULL    |                |
+// | street_name   | varchar(255) | YES  |     | NULL    |                |
+// | zip_code      | int          | YES  |     | NULL    |                |
+// | city          | varchar(255) | YES  |     | NULL    |                |
+
     const data = {
       first_name: firstname,
       last_name: lastname,
       full_name: `${firstname} ${lastname}`,
-      list_imageUrl: picture,
       email: email,
       password: password,
+      list_imageUrl: picture,
+      street_number: streetNumber,
+      street_name: streetName,
+      zip_code: zipCode,
+      city: city,
+      country: "France"
     };
 
     console.log(data);
@@ -63,17 +81,17 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 className="" />
 
               <input
-                placeholder="Title"
-                type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                placeholder="Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="" />
 
               <input
-                placeholder="Family"
-                type="text"
-                value={family}
-                onChange={(e) => setFamily(e.target.value)}
+                placeholder="Password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="" />
 
               <input
@@ -84,19 +102,35 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
                 className="" />
 
               <input
-                placeholder="Email"
+                placeholder="Street Number"
                 type="text"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={streetNumber}
+                onChange={(e) => setStreetNumber(e.target.value)}
                 className="" />
 
               <input
-                placeholder="Password"
-                type="password"
+                placeholder="Street Name"
+                type="text"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={streetName}
+                onChange={(e) => setStreetName(e.target.value)}
+                className="" />
+
+              <input
+                placeholder="Zip Code"
+                type="text"
+                required
+                value={zipCode}
+                onChange={(e) => setZipCode(e.target.value)}
+                className="" />
+
+              <input
+                placeholder="City"
+                type="text"
+                required
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
                 className="" />
 
               <button
