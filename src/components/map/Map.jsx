@@ -2,13 +2,14 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import { Link } from "react-router-dom";
 import getCenter from "geolib/es/getCenter"; //57m43
 
 export const Map = ({ event }) => {
  const [viewport, setViewport] = useState({
   latitude: 48.856614,
   longitude: 2.3522219,
-  zoom: 8,
+  zoom: 5,
  });
 
  const [eventDetails, setEventDetails] = useState([]);
@@ -19,18 +20,15 @@ export const Map = ({ event }) => {
    .then((data) => setEventDetails(data));
  }, []);
 
-
  // transform event result object into lat & long object
-//  const coordinates = eventDetails.map((event) => ({
-//   latitude: event.lat,
-//   longitude: event.long,
-//  }));
-
-
+ //  const coordinates = eventDetails.map((event) => ({
+ //   latitude: event.lat,
+ //   longitude: event.long,
+ //  }));
 
  // The latitude and longitude of the center of event coordinates // 59min28
-    //  const center = getCenter(coordinates);
-    //  console.log("test3", center);
+ //  const center = getCenter(coordinates);
+ //  console.log("test3", center);
 
  //
 
@@ -42,20 +40,34 @@ export const Map = ({ event }) => {
    {...viewport}
    onMove={(evt) => setViewport(evt.viewport)}
   >
-   {eventDetails && eventDetails.map(event => {
-       console.log(event);
-       return(
-          <div key={event.long}>
-              <Marker
-                  latitude={event.y_coor}
-                  longitude={event.x_coor}
-                 >
-                 <p
-                 className="cursor"
-                 >🍀</p>
-              </Marker>
-          </div> 
-      )})}
+   {eventDetails &&
+    eventDetails.map((event) => {
+     console.log(event);
+     return (
+      <div key={event.long}>
+       <Marker
+        latitude={event.y_coor}
+        longitude={event.x_coor}
+        offsetLeft={-20}
+        offsetTop={-10}
+       >
+        <h1 className="cursor-pointer">📌</h1>
+       </Marker>
+       <Popup
+        latitude={event.y_coor}
+        longitude={event.x_coor}
+        title={event.title}
+        offsetLeft={-20}
+        offsetTop={-10}
+       >
+        <p>{event.title}</p>
+        <p>{event.author}</p>
+        <Link to={`/agir/${event.id}`}>more</Link>
+       </Popup>
+      </div>
+     );
+     console.log(event.title);
+    })}
   </ReactMapGL>
  );
 };
