@@ -1,10 +1,19 @@
+.navGreen {
+    color: var(--secondary-color);
+    text-shadow: 0px 1px 4px var(--light-color);
+  }
+  .navHeroes {
+    color: var(--leaf-color);
+    text-shadow: 0px 1px 4px var(--light-color);
+  }
+  
 .navbar{
-    background-color: #4086da;
+    background-color: rgb(229,231,225);
     height:5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     position: sticky;
     top:0;
     z-index: 20;
@@ -20,13 +29,15 @@
     max-width:1500px;
 }
 .nav-logo{
-    color: #FEEAA1;
+  
     align-items: center;
-    margin-left: 2rem;
+    margin-left: 1rem;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     flex-grow:1;
+   
+    
 }
 
 .nav-menu{
@@ -36,7 +47,7 @@
     margin-right:2rem;
 }
 .nav-links{
-    color:#ECF8F6;
+    color:var(--ground-color-hover);
     text-decoration: none;
     padding: 0.5rem 1rem;
     height:100%;
@@ -63,11 +74,11 @@
 
 .nav-item:hover:after{
     width:100%;
-    background:#FEEAA1;
+    background:var(--leaf-color);
 }
 
 .nav-item .active{
-    color:#FEEAA1;
+    color:var(--leaf-color);
     border-top: 3px solid;
     border-radius:16px;
 
@@ -83,7 +94,7 @@
         display:flex;
         flex-direction: column;
         width:100%;
-        border-top : 2px solid #FEEAA1;
+        border-top : 2px solid var(--leaf-color);
         position:absolute;
         top:80px;
         left:-110%;
@@ -92,14 +103,14 @@
         box-shadow:0px 4px 8px rgb(145, 145, 145);
     }
     .nav-menu.active{
-        background:#4086da;
+        background:rgb(229,231,225);
         left:0px;
         opacity: 1;   
         transition: all 500ms ease;
         z-index: 1;
     }
     .nav-item .active{
-        color:#FEEAA1;
+        color:var(--ground-color-hover);
         border:none;
     }
     .nav-links{
@@ -112,9 +123,10 @@
         position:absolute;
         top:0;
         right:0;
-        transform:translate(-100%, 60%);
+        transform:translate(-100%, 80%);
         font-size: 1.8rem;
         cursor: pointer;
-        color:#FEEAA1;
+        color:var(--ground-color-hover);
+        
     }
 }

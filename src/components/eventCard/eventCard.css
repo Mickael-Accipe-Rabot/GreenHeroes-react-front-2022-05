@@ -1,0 +1,26 @@
+.eventCard-container{
+    width:100%;
+}
+.event-title{
+text-decoration: none;
+color:black;
+font-size: 1.4rem;
+margin:.5rem 0 .5rem 0;
+}
+.event-description{
+    display: flex;
+    justify-content: space-between;
+    margin:.5rem 0 .5rem 0;
+}
+.event-city{
+    font-size: 1rem;
+    font-weight: initial;
+    text-decoration: underline;
+}
+.event-time{
+    text-decoration: none;
+    color:black
+}
+.list-hr{
+    margin:1rem 0 0rem 0;
+}

@@ -3,12 +3,40 @@
   --ground-color: #9F7250;
   --see-color: #0089BA;
   --secondary-color: #845EC2;
-  --light-color:white;
+  --light-color:rgb(229,231,225);
   --dark-color:black;
+
+  --leaf-color-hover: #09321c;
+  --ground-color-hover: #3e2410;
+  --see-color-hover: #003d53;
+  --secondary-color-hover: #3a1d68;
 }
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.green-btn{
+  background-color:var(--leaf-color);
+  color: var(--light-color);
+  border-radius: 50px;
+}
+.green-btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  box-shadow: 0px 6px 12px var(--leaf-color-hover);
+  transition: all 400ms;
+  transform: translateY(-5px);
+}
+.ground-btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  box-shadow: 0px 6px 12px var(--ground-color-hover);
+  transition: all 400ms;
+  transform: translateY(-5px);
+}
+body{
+  background-color: var(--light-color);
 }
