@@ -65,7 +65,7 @@ export const Login = () => {
               <span
                 onClick={toggleVisible}
               >
-                here
+                <span className="here">here</span>
               </span>
             </div>
             <CreateAccountForm
