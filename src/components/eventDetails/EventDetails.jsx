@@ -9,11 +9,28 @@ export const EventDetails = () => {
   const [eventDetails, setEventDetails] = useState({});
   const [isParticipate, setIsParticipate] = useState(false);
 
+
+  let { id } = useParams();
+  const data = {
+    action_id : id
+  };
+
+  
+
   const handleClick = () => {
     setIsParticipate(!isParticipate);
     console.log(isParticipate);
-    
+    axios
+      .post('http://localhost:8000/api/users-actions', data, {withCredentials: true})
+      // .then((data)=>console.log(data))
+      .then((res) => {
+        // console.log('data:',data);
+        console.log(res.data);
+        // window.location = '/';
+      })
+      .catch((err) => console.log(err));
   };
+
   const unsubscribe = () => {
     if (isParticipate) {
       onmouseleave = () => {
@@ -22,14 +39,26 @@ export const EventDetails = () => {
     }
   };
 
-  let { id } = useParams();
-
   useEffect(() => {
     axios
       .get('http://localhost:8000/api/actions/' + id)
       .then((res) => res.data)
       .then((data) => setEventDetails(data));
   }, [id]);
+
+  // const [users, setUsers] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get('http://localhost:8000/api/users-actions/' + id)
+  //     .then((res) => res.data)
+  //     .then((data) => setUsers(data));
+  //     axios
+  //     .post('http://localhost:8000/api/users/' + id)
+  //     .then((res) => res.data)
+  //     .then((data) => setUsers(data));
+  // }, [id]);
+
+
 
   return (
     <div>
@@ -76,24 +105,26 @@ export const EventDetails = () => {
         <div className="details-players">
           <button
             onClick={handleClick}
-            className={isParticipate ?  'unsubscribe': 'green-btn subscribe'}
+            className={isParticipate ? 'unsubscribe' : 'green-btn subscribe'}
           >
-            {isParticipate ?'Inscris' : 'Participer' }
+            {isParticipate ? 'Inscris' : 'Participer'}
           </button>
 
           <div className="players-list">
             <div className="players-number">
               <span className="nombre-de">nombre de participants :</span>
-              <span> 6{/*{eventDetails.players.length}*/}</span>
+              <span> 6{/*{eventDetails.users.length}*/}</span>
             </div>
 
             {/* <div className="players-list-name">
-          {players.map((player) => (
+          {users
+          .map((user) => (
             <div className="player-item">
-              <p>{player.name}</p>
+              <p>{user.name}</p>
             </div>
           ))}
         </div> */}
+
             <div className="players-list-name">
               <p className="player-item">john</p>
               <p className="player-item">Koko</p>
