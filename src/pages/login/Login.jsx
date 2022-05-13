@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CreateAccountForm } from "./CreateAccountForm";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./login.css";
 
 export const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,9 +33,10 @@ export const Login = () => {
   };
 
   return (
-    <div>
-      <div className="" >
+    <div className="login">
+      <div className="login_form" >
         <form onSubmit={(e) => handleSubmit(e)}>
+          <h1>Sign in</h1>
           <input
             placeholder="email"
             type="text"
@@ -51,19 +53,16 @@ export const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="" />
 
-          <div className="">
-            <input 
+          <div>
+            <input className="green-btn"
               type="submit"
               value="Log In"
-              className="" />
+              />
            
-            </div>
-            </form>
-
-            <div className="">
+          </div>
+            <div className="or_sign_up">
               or create your account{""}
               <span
-                className=""
                 onClick={toggleVisible}
               >
                 here
@@ -73,7 +72,9 @@ export const Login = () => {
               isVisible={isVisible}
               toggleVisible={toggleVisible}
             />
+            </form>
           </div> 
+
       </div>
   );
 };
