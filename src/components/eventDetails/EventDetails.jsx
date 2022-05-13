@@ -12,6 +12,7 @@ export const EventDetails = () => {
   const handleClick = () => {
     setIsParticipate(!isParticipate);
     console.log(isParticipate);
+    
   };
   const unsubscribe = () => {
     if (isParticipate) {
