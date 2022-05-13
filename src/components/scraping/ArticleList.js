@@ -19,24 +19,56 @@ export const ArticleList = () => {
   const [socialFilter, setSocialFilter] = useState(false);
   const [nucleaireFilter, setNucleaireFilter] = useState(false);
 
-  const handleClimatFilter = () => setClimatFilter(!climatFilter);
-  const handlePolitiqueFilter = () => setPolitiqueFilter(!politiqueFilter);
-  const handleSocialFilter = () => setSocialFilter(!socialFilter);
-  const handleNucleaireFilter = () => setNucleaireFilter(!nucleaireFilter);
+  const [isClimatFocus, setIsClimatFocus] = useState(false);
+  const [isPolitiqueFocus, setIsPolitiqueFocus] = useState(false);
+  const [isSocialFocus, setIsSocialFocus] = useState(false);
+  const [isNucleaireFocus, setIsNucleaireFocus] = useState(false);
+
+  const handleClimatFilter = () => {
+    setClimatFilter(!climatFilter);
+    setIsClimatFocus(!isClimatFocus);
+  };
+
+  const handlePolitiqueFilter = () => {
+    setPolitiqueFilter(!politiqueFilter);
+    setIsPolitiqueFocus(!isPolitiqueFocus);
+  };
+
+  const handleSocialFilter = () => {
+    setSocialFilter(!socialFilter);
+    setIsSocialFocus(!isSocialFocus);
+  };
+
+  const handleNucleaireFilter = () => {
+    setNucleaireFilter(!nucleaireFilter);
+    setIsNucleaireFocus(!isNucleaireFocus);
+  };
 
   return (
     <div className="ArticleList">
       <div className="ArticleList_category">
-        <button className="ArticleList_button" onClick={handleClimatFilter}>
+        <button
+          className={isClimatFocus ? "active_btn" : "inactive_btn"}
+          onClick={handleClimatFilter}
+        >
           Climat
         </button>
-        <button className="ArticleList_button" onClick={handlePolitiqueFilter}>
+        <button
+          className={isPolitiqueFocus ? "active_btn" : "inactive_btn"}
+          onClick={handlePolitiqueFilter}
+        >
           Politique
         </button>
-        <button className="ArticleList_button" onClick={handleSocialFilter}>
+        <button
+          className={isSocialFocus ? "active_btn" : "inactive_btn"}
+          onClick={handleSocialFilter}
+        >
           Social
         </button>
-        <button className="ArticleList_button" onClick={handleNucleaireFilter}>
+        <button
+          className={isNucleaireFocus ? "active_btn" : "inactive_btn"}
+          onClick={handleNucleaireFilter}
+        >
           Nucléaire
         </button>
       </div>
