@@ -54,7 +54,7 @@ export const Login = () => {
             className="" />
 
           <div>
-            <input className="green-btn"
+            <input className="a-green-btn"
               type="submit"
               value="Log In"
               />
