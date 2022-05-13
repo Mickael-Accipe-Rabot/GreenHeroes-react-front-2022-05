@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import './createAccountForm.css';
 
 export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
   const [firstname, setFirstname] = useState("");
@@ -52,7 +53,7 @@ export const CreateAccountForm = ({ isVisible, toggleVisible }) => {
   };
 
   return (
-    <div>
+    <div className="create-container">
       {isVisible && (
         <div className="">
           <div
