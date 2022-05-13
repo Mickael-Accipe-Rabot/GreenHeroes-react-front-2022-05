@@ -1,0 +1,36 @@
+.ArticleList {
+  background-color: rgba(229, 229, 229, 1);
+  height: 100vh;
+}
+
+.ArticleList_category {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.ArticleList_category button {
+  display: inline-block;
+  background-color: white;
+  color: rgba(0, 129, 207, 1);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 30px;
+  text-transform: inherit;
+  font-size: large;
+  margin: 5px;
+  border: 1px solid rgba(0, 129, 207, 1);
+  cursor: pointer;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.ArticleList_category button:hover {
+  background-color: rgba(0, 129, 207, 1);
+  color: white;
+}
+
+.ArticleList_category button:focus {
+  background-color: rgba(0, 129, 207, 1);
+  color: white;
+}
