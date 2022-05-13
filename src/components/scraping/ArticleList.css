@@ -6,10 +6,10 @@
 .ArticleList_category {
   overflow: auto;
   white-space: nowrap;
-  padding-bottom: 1rem;
+  padding :2rem 0 1rem 0;
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+
 }
 
 .ArticleList_category button {
