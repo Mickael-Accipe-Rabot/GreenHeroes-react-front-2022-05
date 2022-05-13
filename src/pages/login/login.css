@@ -62,3 +62,7 @@ form {
     text-decoration: underline;
     margin: .5rem;
 }
+.here:hover{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
